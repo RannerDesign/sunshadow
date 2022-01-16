@@ -1,0 +1,161 @@
+/*	sunshadow.css
+	v1.6.0	2022-01-16 RB
+*/
+html, body {padding: 0; margin: 5px;}
+body {
+	background-image: url('data:image/svg+xml;UTF-8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"%3E%3Crect x="0" y="0" width="16" height="16" fill="%23f1f1f1" /%3E%3Crect stroke-width="0" x="7" y="7" width="2" height="2" fill="%23aaa" /%3E%3C/svg%3E');
+	background-repeat: repeat;
+}
+h2 {text-align: center; color: #0e66be;}
+/*	General formatting													*/
+div.centerdiv {
+	width: max-content;
+	margin: auto;
+	background-color: #f1f1f1;
+}
+#drawing {
+	margin: 5px;
+	border: solid 2px #0e66be;
+}
+#editor {
+	width: 780px;
+	height: 400px;
+	font-size: 11px;
+	border: solid 2px #0e66be;
+}
+#confdata {visibility: hidden;}
+/*	Input groups and grid												*/
+div.ingroup {
+	margin: 20px;
+	border: solid 2px #0e66be;
+	border-radius: 11px;
+	background-color: #f1f1f1;
+	width: max-content;
+	padding: 20px;
+}
+div.ingroup > p {
+	color: #0e66be;
+	background-color: #f1f1f1;
+	position: relative;
+	top: -38px;
+	left: 10px;
+	margin: 0;
+	padding: 5px;
+	width: max-content;
+	border: none;
+	border-radius: 11px;
+}
+div.grid5 {
+	display: grid;
+	grid-template-columns: 125px 125px 125px 125px 125px;
+	grid-gap: 10px;
+	position: relative;
+}
+.centered {text-align: center;}
+.gridwid0 {width: 125px;}
+.gridwid1 {width: 117px;}
+.gridele {text-align: center;}
+.gridinfo {margin: 0px; font-size: 12px;}
+.daytimedial {visibility: hidden;}
+
+div.ingrid {margin-top: -35px;}
+div.ingrid label { text-align: left; padding-top: 2px; color: #0e66be}
+div.ingrid input {
+	padding: 2px;
+    border: 2px solid #0e66be;
+	border-radius: 7px;
+	color: #0e66be;
+}
+div.ingrid select {
+    border: 2px solid #0e66be;
+    border-radius: 7px;
+	color: #0e66be;
+}
+div.ingrid input:hover, div.ingrid input:focus, div.ingrid select:hover, div.ingrid select:focus {
+	background-color: #ffffaa;
+	border-color: #aaaa00;
+}
+/*	Buttons																*/
+.but1 {
+	background-color: transparent;
+	border: 1px solid #c0260e;
+	border-radius: 4px;
+	color: #c0260e;
+	padding: 5px 0;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin: 5px 0;
+	cursor: pointer;
+	transition: all .15s ease-in-out;
+	min-width: 80px;
+}
+a.but1 {box-sizing: border-box;}
+.but1:focus, .but1:hover {
+	box-shadow: 0 0 0 3px rgba(192,38,14,.25);
+	outline-width: 0px;
+	outline-color: #c0260e;
+	background-color: #c0260e;
+	color: #e1e1e1;
+}
+.spinbuttonarea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    border: 2px solid #0e66be;
+    border-radius: 7px;
+    background-color: #dfdfdf;
+}
+.spinbutton {
+    border: 2px solid #0e66be;
+    border-radius: 4px;
+    width: 50%;
+    height: 20px;
+    border: none;
+    background-color: #dfdfdf;
+    padding: 0;
+    color: #0e66be;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    line-height: 14px;
+    transition: all .15s ease-in-out;
+}
+.spinbutton:focus, .spinbutton:hover {
+    background-color: #0e66be;
+    color: #dfdfdf;
+}
+
+
+/*	Message area														*/
+#msgarea {}
+msgblock {
+	
+}
+msghead {
+	
+}
+msgtext {
+	
+}
+.msgerror {
+	color: #770000;
+	background-color: #ff777777;
+	border-color: #770000;
+}
+.msgwarning {
+	color: #777700;
+	background-color: #ffff7777;
+	border-color: #777700;
+}
+.msgsuccess {
+	color: #007700;
+	background-color: #77ff7777;
+	border-color: #007700;
+}
+

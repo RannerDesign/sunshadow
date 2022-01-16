@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Sun Shadow Help</title>
+	<link rel="stylesheet" href="sunshadow.css" type="text/css" />
+	<style>
+		ul {margin: 0;}
+	</style>
+</head>
+<body>
+	<h2>Shadow Simulation</h2>
+	<div style="width: 80%; margin: auto; background-color: #eee; padding: 5px;">
+	<p>
+	The application sunshadow is designed to calculate shadow of given objects based on the sun position at date and time to be entered.
+	</p>
+	<p>
+	Configurations can be saved as files in json format. Date and time can be entered by keying in or using range dials. Once the simulation is started, sun position at that day and time is shown as azimuth (0° = south) and altitude (0 - 90°).
+	</p>
+	<p>
+	The content of the configuration file can be edited in the bottom part of the window. Be careful to comply with the json syntax. Errors will be marked by the syntax highlighting editor (ACE).
+	</p>
+	<p>
+	Structure of the configuration file (json format):
+	</p>
+	<div style="display: grid; grid-template-columns: 20% 80%; grid-gap: 10px; position: relative;">
+	<label>title</label>
+	<div>Arbitrary text to identify configuration</div>
+	<label>date</label>
+	<div>Date and time of stored configuration</div>
+	<label>longitude</label>
+	<div>Geoposition longitude of the configuration</div>
+	<label>latitude</label>
+	<div>Geoposition latitude of the configuration</div>
+	<label>direction</label>
+	<div>Orientation of the y-axis of the coordinated (0° = north)</div>
+	<label>lowsun</label>
+	<div>Min level for sun altitude, below is regarded as darkness</div>
+	<label>units</label>
+	<div>Length units of all coordinates</div>
+	<label>shadowlevel</label>
+	<div>z-coordinate level for which shadows are calculated (e.g. 0 = ground floor, 720 mm may be a table)</div>
+	<label>equiscale</label>
+	<div>if true, force same scaling factors for X and Y axis by changing canvas height</div>
+	<label>area</label>
+	<div>Array defining the area for which shadows are calculated and shown<br />[xmin, xmax, ymin, ymax]<br /></div>
+	<label>data</label>
+	<div style="height: 60px;">Definition of the shadow generating objects<br />List with elements containing the following fields:</div>
+	<label>shadow</label>
+	<div>Activate or deactivate element (true, false) for shadow generation</div>
+	<label>draw</label>
+	<div>Activate or deactivate element (true, false) for drawing</div>
+	<label>type</label>
+	<div>Object type, describing the way coordinates are given, the following values are allowed:<ul><li>cuboid: defined by param</li><li>poly: defined by polynom data</li></ul></div>
+	<label>style</label>
+	<div>Kind of material, allowed values are:<ul><li>wall</li><li>canopy</li><li>fabric</li><li>vertical</li><li>draw</li></ul></div>
+	<label>title</label>
+	<div>Descriptive text for this element</div>
+	<label>param</label>
+	<div>xmin, xmax, ymin, ymax, bottom, top</div>
+	<label>data</label>
+	<div>polygon defined by a list of [x, y, z] coordinates (polygon closed automatically from last to fist list element)</div>
+	<label>format</label>
+	<div>json object containing canvas formatting elements (e.g. strokeStyle, fillStyle)</div>
+	</div>
+	</div>
+</body>
+</html>

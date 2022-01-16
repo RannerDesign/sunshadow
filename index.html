@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html >
+<head>
+	<meta charset="UTF-8">
+	<title>Sun Shadow</title>
+	<link rel="stylesheet" href="sunshadow.css" type="text/css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.13/ace.js" integrity="sha512-OMjy8oWtPbx9rJmoprdaQdS2rRovgTetHjiBf7RL7LvRSouoMLks5aIcgqHb6vGEAduuPdBTDCoztxLR+nv45g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/suncalc/1.8.0/suncalc.min.js" integrity="sha512-s40QuZdS5wcjdt2OHUWSGRCECWr+YqbvRSaiBpEKOlOsbePPvXreeOTB4SVteinFcc1RpW/uDueEsknm9iJl2g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="polybool.min.js"></script>
+	<script src="sunshadow.js"></script>
+</head>
+<body>
+	<div id="msgarea"></div>
+	<h2>Shadow Simulation</h2>
+	<div class="centerdiv">
+		<div class="ingroup">
+			<p>Configuration</p>
+			<div class="ingrid grid5">
+				<div>
+					<button type="button" class="but1 gridwid0" onclick="readConfigFile();">Open</button>
+					<select id="conffile" class="gridwid0" onchange="readConfigFile();">
+					</select>
+				</div>
+				<div>
+					<button type="button" class="but1 gridwid0" onclick="saveConfigFile();">Save</button>
+				</div>
+				<div>
+					<button type="button" class="but1 gridwid0" onclick="saveAsConfigFile();">Save As</button>
+					<input type="text" id="saveasfile" class="gridwid1" />
+				</div>
+				<div>
+					<button type="button" class="but1 gridwid0" onclick="deleteConfigFile();">Delete</button>
+				</div>
+				<div id="confdata" class="gridinfo gridwid0">
+				</div>
+			</div>
+		</div>
+
+		<div class="ingroup">
+			<p>Simulation</p>
+			<div class="ingrid grid5">
+				<div class="gridele">
+					<button type="button" class="but1 gridwid0" onclick="simulate();">Start</button>
+					<a class="but1 gridwid0" href="sunshadowHelp.html" target="_blank">Help</a>
+				</div>
+				<div class="gridele">
+					<label>Date</label>
+					<input type="text" id="dateC" class="centered gridwid1" onchange="setdatetime();" />
+					<input type="range" id="dateR" class="daytimedial gridwid1" onchange="dialdatetime();" />
+					<div class="daytimedial spinbuttonarea">
+						<button type="button" class="spinbutton" onclick="spinbuttonclick('dateR', '-');">-</button>
+						<button type="button" class="spinbutton" onclick="spinbuttonclick('dateR', '+');">+</button>
+					</div>
+				</div>
+				<div class="gridele">
+					<label>Time</label>
+					<input type="text" id="timeC" class="centered gridwid1" onchange="setdatetime();" />
+					<input type="range" id="timeR" class="daytimedial gridwid1" onchange="dialdatetime();" />
+					<div class="daytimedial spinbuttonarea">
+						<button type="button" class="spinbutton" onclick="spinbuttonclick('timeR', '-');">-</button>
+						<button type="button" class="spinbutton" onclick="spinbuttonclick('timeR', '+');">+</button>
+					</div>
+				</div>
+				<div class="gridele">
+					<label>z-level</label>
+					<input type="text" id="levelC" class="centered gridwid1" onchange="setshadowlevel();" />
+					<input type="range" id="levelR" class="daytimedial gridwid1" onchange="dialshadowlevel();" />
+					<div class="daytimedial spinbuttonarea">
+						<button type="button" class="spinbutton" onclick="spinbuttonclick('levelR', '-');">-</button>
+						<button type="button" class="spinbutton" onclick="spinbuttonclick('levelR', '+');">+</button>
+					</div>
+				</div>
+				<div class="gridele">
+					<label id="azim" class="daytimedial"></label>
+					<label id="alti" class="daytimedial"></label>
+					<label id="cota" class="daytimedial"></label>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h2>Results</h2>
+	<div class="centerdiv">
+		<canvas id="drawing" width="780" height="520"></canvas>
+	</div>
+	<h2>Editor</h2>
+	<div class="centerdiv">
+		<div id="editor"></div>
+	</div>
+	
+</body>
+</html>

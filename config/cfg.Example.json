@@ -1,0 +1,233 @@
+{
+	"title": "Sunblind example",
+	"date": "2022-01-11 23:40:30",
+	"longitude": 9.461221,
+	"latitude": 47.58742,
+	"direction": 228,
+	"lowsun": 1,
+	"units": "mm",
+	"shadowlevel": 720,
+	"equiscale": true,
+	"area": [
+		-600,
+		3230,
+		0,
+		3240
+	],
+	"data": [
+		{
+			"shadow": true,
+			"draw": true,
+			"type": "cuboid",
+			"style": "wall",
+			"title": "Left wall",
+			"param": {
+				"xmin": -400,
+				"xmax": 0,
+				"ymin": -100,
+				"ymax": 1010,
+				"bottom": 0,
+				"top": 2580
+			}
+		},
+		{
+			"shadow": true,
+			"draw": true,
+			"type": "cuboid",
+			"style": "wall",
+			"title": "Middle wall",
+			"param": {
+				"xmin": 0,
+				"xmax": 3230,
+				"ymin": -100,
+				"ymax": 0,
+				"bottom": 0,
+				"top": 2580
+			}
+		},
+		{
+			"shadow": true,
+			"draw": true,
+			"type": "cuboid",
+			"style": "wall",
+			"title": "Right wall",
+			"param": {
+				"xmin": 3230,
+				"xmax": 3330,
+				"ymin": -100,
+				"ymax": 2130,
+				"bottom": 0,
+				"top": 2580
+			}
+		},
+		{
+			"shadow": true,
+			"draw": true,
+			"type": "cuboid",
+			"style": "wall",
+			"title": "Further wall",
+			"param": {
+				"xmin": 3230,
+				"xmax": 4000,
+				"ymin": 2030,
+				"ymax": 2130,
+				"bottom": 0,
+				"top": 2580
+			}
+		},
+		{
+			"shadow": true,
+			"draw": true,
+			"type": "cuboid",
+			"style": "wall",
+			"title": "Left parapet",
+			"param": {
+				"xmin": -710,
+				"xmax": -230,
+				"ymin": 1010,
+				"ymax": 3660,
+				"bottom": 0,
+				"top": 680
+			},
+			"format": {
+				"strokeStyle": "#52527a",
+				"fillStyle": "#52527a"
+			}
+		},
+		{
+			"shadow": true,
+			"draw": true,
+			"type": "cuboid",
+			"style": "wall",
+			"title": "Front parapet",
+			"param": {
+				"xmin": -710,
+				"xmax": 4000,
+				"ymin": 3180,
+				"ymax": 3660,
+				"bottom": 0,
+				"top": 680
+			},
+			"format": {
+				"strokeStyle": "#52527a",
+				"fillStyle": "#52527a"
+			}
+		},
+		{
+			"shadow": true,
+			"draw": true,
+			"type": "cuboid",
+			"style": "canopy",
+			"title": "Ceiling",
+			"param": {
+				"xmin": -710,
+				"xmax": 3230,
+				"ymin": 0,
+				"ymax": 1700,
+				"bottom": 2580,
+				"top": 2680
+			}
+		},
+		{
+			"shadow": true,
+			"draw": true,
+			"type": "poly",
+			"style": "fabric",
+			"title": "Sunblind",
+			"data": [
+				[
+					-400,
+					1460,
+					2580
+				],
+				[
+					3230,
+					1460,
+					2580
+				],
+				[
+					3230,
+					3240,
+					2000
+				],
+				[
+					-400,
+					3240,
+					2000
+				]
+			]
+		},
+		{
+			"shadow": true,
+			"draw": true,
+			"type": "poly",
+			"style": "vertical",
+			"title": "Flounce",
+			"data": [
+				[
+					-400,
+					3240,
+					0
+				],
+				[
+					3230,
+					3240,
+					0
+				],
+				[
+					3230,
+					3240,
+					2380
+				],
+				[
+					-400,
+					3240,
+					2380
+				]
+			]
+		},
+		{
+			"shadow": false,
+			"draw": true,
+			"type": "cuboid",
+			"style": "draw",
+			"title": "Window",
+			"param": {
+				"xmin": 1120,
+				"xmax": 2630,
+				"ymin": 0,
+				"ymax": -100,
+				"bottom": 0,
+				"top": 0
+			},
+			"format": {
+				"strokeStyle": "#ff7700",
+				"fillStyle": "#0077ff9f"
+			}
+		},
+		{
+			"shadow": false,
+			"draw": true,
+			"type": "cuboid",
+			"style": "draw",
+			"title": "Table",
+			"param": {
+				"xmin": 800,
+				"xmax": 1600,
+				"ymin": 400,
+				"ymax": 1900,
+				"bottom": 0,
+				"top": 0
+			},
+			"format": {
+				"strokeStyle": "#ff0000",
+				"lineWidth": 10,
+				"setLineDash": [
+					20,
+					10
+				],
+				"fillStyle": "#ffff0077"
+			}
+		}
+	]
+}
